@@ -3,23 +3,20 @@ public static void main(String[] args){
 
 int a = 1;
 int b = 2;
-int power = 1;
-int count = 1;
+
+System.out.println("a	b	(pow)");
 
 for(int counter = 1; counter <= 5; counter ++) {
 
-if(a <= counter) System.out.print(a+"  ");
+if(a <= counter) System.out.print(a+"\t");
 a++;
 
-if(b <= counter + 1) System.out.print(b+"  ");
+if(b <= counter + 1) System.out.print(b+"\t");
 b++;
 
-for(count = 1; a <= b; a++){
-power = a * power;
-System.out.print(power+"  ");
+int power = (int) Math.pow (counter, a);
+System.out.printf("%d%n", power);
 
-break;
-}
 
 System.out.println();
 }
