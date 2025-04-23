@@ -4,30 +4,32 @@ public class Prime{
 public static void main(String[] args){
 
 Scanner user = new Scanner(System.in);
-boolean flag = false;
+boolean checker = false;
 
 System.out.print("Enter a number : ");
-int choice = user.nextInt();
+int num = user.nextInt();
 
-if(choice == 0 || choice == 1){
+if(num == 0 || num == 1){
 System.out.print("Write number above 0 and 1");
 }
 int count = 2;
 
-while( count <= choice / 2){
+while( count <= num / 2){
  
-	if (choice % count == 0){
-	flag = true;
+	if (num % count == 0){
+	checker = true;
 	break;
 
 	}
 	 count++;
 
-if (!flag)
-System.out.println(choice + " is a prime number.");
-
-System.out.print(!flag);
 }
+
+if (!checker){
+System.out.println(num + " is a prime number." +!checker);
+} 
+
+
 
 
 }
